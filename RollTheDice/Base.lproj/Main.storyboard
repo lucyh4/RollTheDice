@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RollTheDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aJx-XG-HeH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="crp-8H-62o">
+                                <rect key="frame" x="20" y="100" width="374" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQx-hq-8iD">
+                                <rect key="frame" x="140.5" y="628" width="133" height="48"/>
+                                <color key="backgroundColor" red="0.56480497119999995" green="0.1689142287" blue="0.1675068438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ROLL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dg-h8-Ol1"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-sf-6gu">
+                                <rect key="frame" x="20" y="252" width="374" height="330"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn: Player 1 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-0j-fVa">
+                                        <rect key="frame" x="87" y="0.0" width="200.5" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bCl-bI-A0x">
+                                        <rect key="frame" x="67" y="122" width="240" height="208"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CD6-66-Tlr">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="208"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="DiceFive" translatesAutoresizingMaskIntoConstraints="NO" id="kSj-fz-21c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isX-XA-cts">
+                                                        <rect key="frame" x="16.5" y="108" width="67.5" height="100"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v5k-lk-0nQ">
+                                                <rect key="frame" x="140" y="0.0" width="100" height="208"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceFive" translatesAutoresizingMaskIntoConstraints="NO" id="sX6-8z-uPE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-ql-Ybw">
+                                                        <rect key="frame" x="15" y="108" width="70" height="100"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aJx-XG-HeH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Bw-kP-Wl4"/>
+                            <constraint firstItem="aJx-XG-HeH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B9F-qq-l0a"/>
+                            <constraint firstItem="lV0-sf-6gu" firstAttribute="top" secondItem="crp-8H-62o" secondAttribute="bottom" constant="150" id="IOK-uv-7ce"/>
+                            <constraint firstItem="aJx-XG-HeH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IaY-RM-8ZE"/>
+                            <constraint firstItem="crp-8H-62o" firstAttribute="centerX" secondItem="aJx-XG-HeH" secondAttribute="centerX" id="NDa-W4-GOV"/>
+                            <constraint firstAttribute="bottom" secondItem="aJx-XG-HeH" secondAttribute="bottom" id="Uel-hH-N8R"/>
+                            <constraint firstItem="wQx-hq-8iD" firstAttribute="centerX" secondItem="aJx-XG-HeH" secondAttribute="centerX" id="Uyd-C2-64V"/>
+                            <constraint firstItem="crp-8H-62o" firstAttribute="centerX" secondItem="wQx-hq-8iD" secondAttribute="centerX" id="VQh-zA-3d0"/>
+                            <constraint firstItem="wQx-hq-8iD" firstAttribute="width" relation="greaterThanOrEqual" secondItem="aJx-XG-HeH" secondAttribute="height" multiplier="19:128" id="WVM-xh-gkK"/>
+                            <constraint firstItem="crp-8H-62o" firstAttribute="leading" secondItem="aJx-XG-HeH" secondAttribute="trailing" constant="-394" id="X32-pL-h8M"/>
+                            <constraint firstItem="lV0-sf-6gu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yj1-sO-ove"/>
+                            <constraint firstItem="crp-8H-62o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="biP-tz-2vy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lV0-sf-6gu" secondAttribute="trailing" constant="20" id="pIT-kS-50k"/>
+                            <constraint firstItem="crp-8H-62o" firstAttribute="centerX" secondItem="lV0-sf-6gu" secondAttribute="centerX" id="rNo-ol-eK2"/>
+                            <constraint firstItem="wQx-hq-8iD" firstAttribute="top" secondItem="lV0-sf-6gu" secondAttribute="bottom" constant="46" id="rVl-QC-kNR"/>
+                            <constraint firstItem="aJx-XG-HeH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sdd-uu-t1B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dice1ImageView" destination="kSj-fz-21c" id="L2R-QX-nix"/>
+                        <outlet property="dice2ImageView" destination="sX6-8z-uPE" id="eW5-Yd-dO3"/>
+                        <outlet property="playerLabel" destination="L2g-0j-fVa" id="h53-IM-Net"/>
+                        <outlet property="progressView" destination="crp-8H-62o" id="EtX-VX-2m1"/>
+                        <outlet property="rollButton" destination="wQx-hq-8iD" id="tv8-8U-WcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DiceFive" width="100" height="100"/>
+        <image name="GreenBackground" width="444.5" height="414"/>
+    </resources>
+</document>
